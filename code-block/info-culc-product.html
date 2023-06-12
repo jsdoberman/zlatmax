@@ -1,0 +1,109 @@
+<div class="count-product">
+    <div class="count-product__btn-minus"></div>
+    <div class="count-product__number">0</div>
+    <div class="count-product__btn-plus"></div>
+</div>
+
+<style>
+.count-product
+    display: flex
+    align-items: center
+
+    &__btn-minus
+        width: 30px
+        height: 30px
+        border: 1px solid #777777
+        position: relative
+        z-index: 2
+        cursor: pointer
+        transition: all 0.3s
+        &::after
+            content: ''
+            position: absolute
+            display: block
+            top: 50%
+            left: 50%
+            transform: translateX(-50%)
+            height: 1px
+            width: 16px
+            z-index: 3
+            background: #777777
+        &:hover
+            background: #D84727
+
+        &:hover::after
+            background: #fff
+
+    &__number
+        font-weight: 400
+        font-size: 36px
+        line-height: 61px
+        letter-spacing: 0.02em
+        color: #000000
+        margin: 0 16px
+
+    &__btn-plus
+        cursor: pointer
+        width: 30px
+        height: 30px
+        border: 1px solid #777777
+        position: relative
+        z-index: 2
+        transition: all 0.3s
+        &::after
+            content: ''
+            position: absolute
+            display: block
+            top: 50%
+            left: 50%
+            transform: translateX(-50%)
+            height: 1px
+            width: 16px
+            z-index: 3
+            background: #777777
+        &::before
+            content: ''
+            position: absolute
+            display: block
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            height: 16px
+            width: 1px
+            z-index: 3
+            background: #777777
+        &:hover
+            background: #D84727
+
+        &:hover::after
+            background: #fff
+        &:hover::before
+            background: #fff
+</style>
+
+<script>
+    /* ===========================================================лічильник кіл-ті товарів для давання в кошик*/
+
+const btnMinus = document.querySelector('.count-product__btn-minus'),
+		btnPlus = document.querySelector('.count-product__btn-plus'),
+		number = document.querySelector('.count-product__number');
+
+let culcProduct = 0;
+number.innerHTML = culcProduct;
+	
+btnPlus.addEventListener('click', function() {
+	culcProduct = culcProduct + 1;
+	number.innerHTML = culcProduct;
+});
+
+btnMinus.addEventListener('click', function() {
+	if (culcProduct) {
+		culcProduct = culcProduct - 1;
+		number.innerHTML = culcProduct;
+	} else {
+		number.innerHTML = 0;
+	}
+
+});
+    
+</script>

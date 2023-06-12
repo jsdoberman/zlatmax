@@ -1,0 +1,389 @@
+.product-breadcrumb-wrapper
+    margin-top: 30px
+    margin-bottom: 30px
+
+/* ------------------------------------------- */
+
+.prodact-wrapper
+    padding: 5px 0 50px
+
+    &__container
+        display: grid
+        grid-template-columns: 750px minmax(460px, 1fr)
+        gap: 30PX
+        @media (max-width: 1410.98px)
+            grid-template-columns: 600px minmax(460px, 1fr)
+        @media (max-width: 1205.98px)
+            grid-template-columns: 500px minmax(460px, 1fr)
+        @media (max-width: 1093.98px)
+            grid-template-columns: 1fr
+
+/* ------------------------------------------- */
+.product-slider
+    margin-bottom: 16px
+
+.product-slider
+    max-width: calc(100vw - 30px)
+
+    &__big-slide
+        height: 577px
+        overflow: hidden
+        @media (max-width: 1205.98px)
+            height: 500px
+        @media (max-width: 434.98px)
+            height: 330px
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+.product-slider-prev
+    max-width: calc(100vw - 30px)
+    @media (max-width: 1093.98px)
+
+    &__img-slide
+        margin: 0 8px
+        height: 195px
+        @media (max-width: 1410.98px)
+            height: 125px
+        @media (max-width: 434.98px)
+            height: 75px
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+.product-info-block
+    padding: 30px
+    background: #FEFEFE
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1)
+    @media (max-width: 382.98px)
+        padding: 18px
+    &__header
+        border-bottom: 1px solid rgba(20, 20, 20, 0.15)
+        padding-bottom: 30px
+
+    &__wrapper-header
+        display: flex
+        flex-wrap: wrap
+        gap: 30px
+        margin-bottom: 15px
+
+    &__product-name
+        font-weight: 700
+        font-size: 24px
+        line-height: 29px
+        color: #141414
+
+    &__rait
+        flex: 1 1 auto
+
+    &__status
+        font-weight: 500
+        font-size: 16px
+        line-height: 20px
+        color: #24AD53
+
+    &__about
+        padding: 30px 0
+        border-bottom: 1px solid rgba(20, 20, 20, 0.15)
+        display: grid
+        grid-template-columns: auto 1fr
+        gap: 30px
+        @media (max-width: 451.98px)
+            grid-template-columns: 1fr
+            gap: 15px
+
+    &__info-about
+        font-weight: 500
+        font-size: 18px
+        line-height: 22px
+        color: rgba(20, 20, 20, 0.5)
+
+        &:nth-child(2n+1)
+            color: #141414
+
+    &__select-block
+        padding: 30px 0
+        border-bottom: 1px solid rgba(20, 20, 20, 0.15)
+        display: grid
+        grid-template-columns: auto 1fr
+        gap: 30px
+        align-items: center
+        @media (max-width: 578.98px)
+            grid-template-columns: 1fr
+            gap: 15px
+
+        label
+            font-weight: 500
+            font-size: 18px
+            line-height: 22px
+            color: #141414
+
+    .choices
+
+        &__inner
+            width: 100%
+
+    .choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted
+        background-color: #f2f2f2
+        //display: none
+
+    .choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable
+        padding-right: 10px
+        font-size: 17px
+
+    .choices[data-type*=select-one]::after
+        height: 10px
+        width: 10px
+        border: 3px solid #E8AA31
+        border-width: 0 0 3px 3px
+        right: 15px
+        transform: rotate(-45deg) translateY(-50%)
+
+    .choices[data-type*=select-one].is-open::after
+        height: 10px
+        width: 10px
+        border: 3px solid #E8AA31
+        border-width: 0 0 3px 3px
+        transform: rotate(-225deg) translateY(50%)
+        margin-top: 0
+
+    .choices[data-type*=select-one]::before
+        content: ''
+        display: block
+        position: absolute
+        top: 0
+        right: 0
+        height: 100%
+        width: 50px
+        background: #141414
+        border-radius: 0 3px 3px 0
+
+    &__price-block
+        display: flex
+        flex-wrap: wrap
+        gap: 20px
+        padding: 30px 0
+        align-items: center
+        position: relative
+
+    &__price
+        font-weight: 700
+        font-size: 30px
+        line-height: 37px
+        color: #000000
+        flex: 1 1 auto
+
+    &__bonus
+        font-weight: 500
+        font-size: 14px
+        line-height: 17px
+        color: rgba(20, 20, 20, 0.5)
+
+    &__ques
+        font-weight: 500
+        font-size: 12px
+        line-height: 15px
+        color: #000000
+        width: 19px
+        height: 19px
+        border-radius: 100%
+        background: rgba(20, 20, 20, 0.3)
+        display: flex
+        justify-content: center
+        align-items: center
+        cursor: pointer
+
+    .count-product
+        display: flex
+        align-items: center
+
+        width: 160px
+        justify-content: space-between
+
+        &__btn-minus
+            flex: 0 1 50px
+            height: 50px
+            background: #141414
+            position: relative
+            z-index: 2
+            cursor: pointer
+            transition: all 0.3s
+            &::after
+                content: ''
+                position: absolute
+                display: block
+                top: 50%
+                left: 50%
+                transform: translateX(-50%)
+                height: 1px
+                width: 16px
+                z-index: 3
+                background: #fff
+            &:hover
+                background: #E8AA31
+
+        &__number
+            font-weight: 500
+            font-size: 18px
+            line-height: 22px
+            color: #000000
+
+        &__btn-plus
+            cursor: pointer
+            flex: 0 1 50px
+            height: 50px
+            background: #141414
+            position: relative
+            z-index: 2
+            transition: all 0.3s
+            &::after
+                content: ''
+                position: absolute
+                display: block
+                top: 50%
+                left: 50%
+                transform: translateX(-50%)
+                height: 1px
+                width: 16px
+                z-index: 3
+                background: #fff
+            &::before
+                content: ''
+                position: absolute
+                display: block
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                height: 16px
+                width: 1px
+                z-index: 3
+                background: #fff
+            &:hover
+                background: #E8AA31
+
+    &__btns-block
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        justify-content: space-between
+        gap: 25px
+        @media (max-width: 482.98px)
+            justify-content: center
+
+    &__btn-add-to-cart
+        background: #E8AA31
+        box-shadow: 0px 4px 20px rgba(232, 170, 49, 0.43)
+        border-radius: 3px
+        font-weight: 600
+        font-size: 18px
+        line-height: 46px
+        color: #FFFFFF
+        display: flex
+        gap: 7px
+        align-items: center
+        padding: 0 45px
+        cursor: pointer
+        @media (max-width: 482.98px)
+            width: 100%
+            justify-content: center
+
+.question-pop-up
+    position: absolute
+    max-width: 300px
+    padding: 15px 25px
+    border: 3px solid #E8AA31
+    border-radius: 15px
+    background: #141414
+    top: -30px
+    right: 20px
+    visibility: hidden
+    opacity: 0
+    transition: all 0.3s
+    transform: translateX(30px)
+    &__body
+        font-weight: 500
+        font-size: 18px
+        line-height: 27px
+        color: #fff
+
+    &__close
+        position: absolute
+        top: 0px
+        right: -26px
+        font-size: 34px
+        width: 22px
+        height: 22px
+        border-radius: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        background: #E8AA31
+        cursor: pointer
+        transition: color 0.3s
+        &:hover
+            color: #fff
+
+    &_active
+        visibility: visible
+        opacity: 1
+        transform: translateX(0px)
+
+/* ------------------------------------------- */
+
+.product-description
+    padding: 30px 0
+
+    &__container
+
+    &__tabs-wrapper
+        background: #FEFEFE
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1)
+        padding: 30px
+
+    &__tabs-items
+        padding-bottom: 20px
+        border-bottom: 1px solid rgba(20, 20, 20, 0.15)
+        overflow: auto
+        display: flex
+        column-gap: 60px
+        row-gap: 30px
+        flex-wrap: wrap
+
+    &__name
+        font-weight: 600
+        font-size: 20px
+        line-height: 24px
+        color: rgba(20, 20, 20, 0.5)
+        display: inline-block
+        cursor: pointer
+        transition: 0.3s
+        &:hover
+            color: rgba(20, 20, 20, 0.9)
+
+    &__name_active
+        font-weight: 700
+        color: #141414
+        position: relative
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            bottom: -20px
+            left: 0
+            width: 100%
+            height: 2px
+            background: #E8AA31
+            box-shadow: 0px 4px 20px rgba(232, 170, 49, 0.3)
+
+    &__descr
+        display: none
+        p
+            font-weight: 500
+            font-size: 18px
+            line-height: 27px
+            color: #141414
+
+    &__descr_active
+        display: block

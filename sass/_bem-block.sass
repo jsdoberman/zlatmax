@@ -1,0 +1,214 @@
+
+.btn-show-more
+    font-weight: 600
+    font-size: 20px
+    line-height: 46px
+    color: #E8AA31
+    border: 2px solid #E8AA31
+    transition: filter 0.3s
+    border-radius: 3px
+    padding: 0 55px
+    height: 46px
+    background: transparent
+    &:hover
+        filter: drop-shadow(0px 4px 20px rgba(232, 170, 49, 0.43))
+
+/* ======================================= pagination*/
+.pagination
+    display: flex
+    align-items: center
+    gap: 30px
+
+    &__left
+        background: transparent
+        height: 20px
+        width: 11.5px
+        transition: all 0.3s
+        &:hover
+            svg
+                path
+                    fill: #F6B817
+                    fill-opacity: 1
+
+    &__list
+        display: flex
+        gap: 30px
+        align-items: center
+
+    &__item
+        display: flex
+        justify-content: center
+        align-items: center
+        &_active
+            background: #F6B817
+            width: 34px
+            height: 34px
+            border-radius: 100%
+            a
+                color: #FFFFFF
+
+    &__link
+        font-weight: 500
+        font-size: 18px
+        line-height: 32px
+        color: #000000
+        transition: color 0.3s
+        &:hover
+            color: #F6B817
+
+    &__right
+        transform: rotate(-180deg)
+        background: transparent
+        height: 20px
+        width: 11.5px
+        transition: all 0.3s
+        &:hover
+            svg
+                path
+                    fill: #F6B817
+                    fill-opacity: 1
+
+/* ======================================= item*/
+
+h1, .h1
+    font-weight: 700
+    font-size: 24px
+    line-height: 29px
+    color: #141414
+
+/* ======================================= product-item*/
+.product-item
+    padding: 30px 20px
+    background: #FEFEFE
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1)
+    //flex: 0 1 375px
+    max-width: 375px
+    width: 100%
+    min-height: 600px
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    position: relative
+
+    &__sale-label
+        position: absolute
+        width: 90px
+        height: 35px
+        background: #E8AA31
+        font-weight: 600
+        font-size: 18px
+        line-height: 22px
+        color: #FFFFFF
+        z-index: 22
+        display: flex
+        justify-content: center
+        align-items: center
+        top: 26px
+        left: 0
+        b
+
+    &__img
+        max-width: 270px
+        height: 240px
+        display: block
+        margin: 0 auto
+        margin-bottom: 52px
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: contain
+            transition: all 0.5s
+
+    &:hover .product-item__img img
+        transform: scale(1.1)
+
+    &__name
+        margin-bottom: 2px
+        flex: 1 1 auto
+        max-height: 68px
+        overflow: hidden
+        a
+            font-weight: 600
+            font-size: 20px
+            line-height: 34px
+            color: #141414
+
+    &__info-block
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        flex-wrap: wrap
+        margin-bottom: 10px
+        flex: 1 1 auto
+
+    &__size
+        font-weight: 600
+        font-size: 16px
+        line-height: 34px
+        color: #ABABAB
+
+    &__type
+        font-weight: 600
+        font-size: 16px
+        line-height: 27px
+        color: #ABABAB
+
+    &__rait-block
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+        padding-bottom: 26px
+        border-bottom: 1px solid rgba(20, 20, 20, 0.5)
+        margin-bottom: 20px
+        flex: 1 1 auto
+
+    &__rait
+        display: flex
+        gap: 10px
+
+    &_reviews
+        font-weight: 500
+        font-size: 16px
+        line-height: 34px
+        color: #ABABAB
+
+    &__price-block
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 30px
+
+    &__price
+        font-weight: 600
+        font-size: 20px
+        line-height: 34px
+        color: #141414
+        span
+            margin-right: 4px
+
+    &__check
+        display: flex
+        gap: 15px
+        img
+            cursor: pointer
+
+    &__btn
+        background: #E8AA31
+        box-shadow: 0px 4px 20px rgba(232, 170, 49, 0.43)
+        border-radius: 3px
+        font-weight: 600
+        font-size: 18px
+        line-height: 46px
+        color: #FFFFFF
+        width: 100%
+        height: 50px
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 15px
+        transition: background 0.3s
+
+        &:hover
+            background: #7c6534

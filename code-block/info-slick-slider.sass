@@ -1,0 +1,46 @@
+
+    <section class="test">
+        <div class="test__container">
+            <div class="test-slider">
+                <div>
+                    <div class="test-slider__test-slide">
+                        <div class="test-slider__img"><img src="img/main/00.png" alt=""></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="test-slider__test-slide">22222</div>
+                </div>
+                <div>
+                    <div class="test-slider__test-slide">33333</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+.test
+
+    &__container
+
+.test-slider   //Головний батьківський тег (Привязка в js) - Він же і .slick-slider
+
+    .slick-list //Видима область в якій виводиться задана кіл-ть слайдів
+        //Задається ширина слайдера, і ширина слайдів (ширина 1 слайда = width / на кіл-ть слайдів)
+        max-width: 800px
+        // За замовчуванням overflow: hidden  - .slick-list - і обрізає все що виходить за область слайда!
+        padding: 0 0 70px 0
+        background: grey
+        height: 600px //Можна задаті висоту області слайдера (За замовчуванням - auto)
+
+        .slick-track //Вся область слайдів. Через батьківський тег .slick-list скрита решта слайдів
+
+            .slick-slide  //Тег-обгортка <div>
+
+                .test-slider__test-slide //Конкретний слайд //Висота слайдера визначається по висоті цього блока
+                    background: green
+                    height: 251px
+                    border: 1px solid red
+                    margin: 0 10px //Зробити промижок між слайдами
+
+                    .test-slider__img
+
+                        img
